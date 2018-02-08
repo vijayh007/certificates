@@ -115,3 +115,12 @@ curl -X GET \
   'http://localhost:8080/certificates/get_certificates_by_courseid?courseId=2' \
   -H 'cache-control: no-cache' \
   -H 'postman-token: d949c35b-12c0-b46f-3003-e054a96fc439'
+
+
+
+Get certificates by dates :
+-----------------------------
+curl -X GET \
+  'http://localhost:8080/certificates/get_certificates_by_dates?fromDate=2018-02-08&toDate=2018-02-09' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 3573965f-b9f1-7984-deec-6dd9df072354'
