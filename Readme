@@ -1,0 +1,117 @@
+API Details :
+
+ Signup User :
+ -------------------
+
+ curl -X POST \
+  http://localhost:8080/user/signup_user \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 49f32889-43be-d2b5-1df6-9c178dec1517' \
+  -d '  {
+  	"firstName":"Raj",
+  	"lastName":"Khanna",
+  	"email": "raj@gmail.com",
+  	"password":"123#11",
+  	"education":"Mtech",
+  	"country":"India",
+  	"phone":"9876543210",
+  	"securityQuestion":"what is your name",
+  	"securityAnswer":"raj"
+  }'
+
+
+GetUser :
+-----------------
+curl -X GET \
+  'http://localhost:8080/user/get_user?userId=9' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 79932023-06da-4f33-5f58-096d6545c122'
+
+
+
+Create course:
+---------------------
+
+  curl -X POST \
+  http://localhost:8080/course/create_course \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 58e231a9-253e-8b2b-dbd3-4892ec08f5a9' \
+  -d '{
+	"courseDescription":"this is test for MYSQL",
+	"totalQuestions":"25",
+	"passingMarks":"75",
+	"duration":"90"
+}'
+
+Get course by ID :
+--------------------
+
+curl -X GET \
+  'http://localhost:8080/course/get_course_by_id?course_id=2' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: b4acc0df-384c-8047-1ebc-7f9bbaff0d98'
+
+
+
+Get All the courses :
+----------------------
+
+ curl -X GET \
+  http://localhost:8080/course/get_all_courses \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 88cd53a6-8790-42dd-845a-1c76770dfb74'
+
+
+
+Create Answer :
+-------------------------
+curl -X POST \
+  http://localhost:8080/answers/create_answer \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 069a2f7f-4c9b-64a3-7e03-fc408861c169' \
+  -d '{
+	"questionId":"3",
+	"correctAnswer":"3"
+}'
+
+
+get Answers :
+-----------------------------
+curl -X GET \
+  'http://localhost:8080/answers/get_answers?questionId=5' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: e6e91372-c875-cd91-b719-93f0e5393596'
+
+
+
+
+CreateCertificate :
+-------------------------
+curl -X POST \
+  http://localhost:8080/certificates/create_certificates \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: e25569df-1faf-3704-d85e-ece0cb1ec79d' \
+  -d '{
+	"userId": "7",
+	"courseId": "1",
+	"marks" : "80"
+}'
+
+
+GetCartificateByUserID:
+-----------------------------
+curl -X GET \
+  'http://localhost:8080/certificates/get_certificates_by_userid?userId=9' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: 7b5ceb6f-65a6-2c57-feef-b4e4d5128b70'
+
+getCertificateByCourseId :
+---------------------------
+curl -X GET \
+  'http://localhost:8080/certificates/get_certificates_by_courseid?courseId=2' \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: d949c35b-12c0-b46f-3003-e054a96fc439'

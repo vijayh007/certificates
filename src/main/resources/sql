@@ -1,0 +1,27 @@
+CREATE DATABASE certificates;
+
+create table signup_details(
+ID int NOT NULL AUTO_INCREMENT ,first_name VARCHAR(25),
+last_name VARCHAR(25), email VARCHAR(35),
+ password VARCHAR(40), education VARCHAR(40),
+  country VARCHAR(40), phone VARCHAR(40),
+  security_question VARCHAR(40), security_answer VARCHAR(40),
+  created_at datetime, updated_at datetime,
+  PRIMARY KEY (ID));
+
+
+
+create table course_details(
+ID int NOT NULL AUTO_INCREMENT,
+description VARCHAR(400), total_questions int,
+passing_marks int, duration int, created_at datetime,
+updated_at datetime,
+  PRIMARY KEY (ID));
+
+
+create table question_details(
+ID int NOT NULL AUTO_INCREMENT,
+course_id int,
+question VARCHAR(200),created_at datetime, updated_at datetime,
+  PRIMARY KEY (ID));
+

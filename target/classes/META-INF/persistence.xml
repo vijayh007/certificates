@@ -1,0 +1,18 @@
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="certificates" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- converters
+        <class>com.liftoff.certificates.log.ObjectToJsonConverter</class>
+        <class>com.liftoff.certificates.log.MapToStringConverter</class>
+-->
+        <!-- models -->
+        <class>com.liftoff.certificates.entity.SignupDetails</class>
+        <class>com.liftoff.certificates.entity.CourseDetails</class>
+        <class>com.liftoff.certificates.entity.QuestionDetails</class>
+        <class>com.liftoff.certificates.entity.AnswerDetails</class>
+        <class>com.liftoff.certificates.entity.CertificatesDetails</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+</persistence>
